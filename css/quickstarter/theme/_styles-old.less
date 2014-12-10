@@ -1,0 +1,45 @@
+
+@bgcolor  : #33abeb;
+@bgaccent : #0D74E1;
+
+.jumbotron{
+	padding: 200px 0;
+	//background: @bgcolor;
+	.gradient(@bgcolor, @bgaccent);
+	color: #fff;
+	margin-bottom: 80px;
+
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+
+	text-shadow: 0 1px 0 @bgaccent;
+
+	.title{
+		margin-bottom: 40px;
+	}
+	.btn{
+		margin-bottom: 0.5em;
+	}
+}
+
+.logo{
+	display: block;
+	width: 128px;
+	height: 128px;
+	background: url(../img/logo.png) no-repeat center center;
+	text-align: center;
+	margin: 0 auto 80px;
+	position: relative;
+
+	&:after{
+	    content: "";
+		background: @bgaccent;
+	    height: 113px;
+	    position: absolute;
+	    top: 13px;
+	    transform: rotateZ(30deg) scaleX(50) translateX(9.2px);
+	    width: 20px;
+	    z-index: -1;
+	}
+}
