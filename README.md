@@ -4,7 +4,7 @@
 Quickstarter is a bunch of tools to help you build your next HTML5 project.
 Its a responsive Grid System
 
-Check it out [http://www.quickstarter.com.ar](http://www.quickstarter.com.ar)
+Check it out [See full docs](achavazza.github.io/getquickstarter/)
 
 Twitter account
 ---------------
