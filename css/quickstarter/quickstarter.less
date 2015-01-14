@@ -9,13 +9,25 @@
 // Table of Contents
 // ======================================================================================================
 // #Init- Setup
+// #Type
+// #Margins
+// #Colors
+// #Global element variables
+// - #Lists
+// - #Block
+// - #Complex
+// - #Forms
+// - #Tables
+// - #Media
+// - #Definition Lists
+// #Layout
+// #Responsive
 // #Imports
 
 
 // #Init - Setup
 // ================================
 
-// Can touch this!
 
 // Type
 // -------------------------------- 
@@ -32,9 +44,11 @@
 
 // Margins
 // -------------------------------- 
+
 @hSpacing      : 1.414em 0 0.5em;  //headline separation;
-//@hSpacing      : 0.2em;  //headline separation;
-@pSpacing      : 1em;    //paragraph separation;
+@pSpacing      : 1em;              //paragraph separation;
+
+
 
 // Colors
 // -------------------------------- 
@@ -73,7 +87,7 @@
 
 //
 // Global Element variables
-//
+// -------------------------------- 
 
 @elemWidth   : 9em;       // 1
 @elemSpan    : 1em;       // 2
@@ -85,7 +99,7 @@
 
 
 
-// Lists
+// - List
 // --------------------------------------------------
 // ┌ 5 ┬─────── 100% ────────┐
 //      ##################### ┐ 
@@ -97,7 +111,7 @@
 @listSpacing   : @elemSpacing;
 
 
-// Block
+// - Block
 // --------------------------------------------------
 // ┌─── 6 ────┐
 // ┌──────────┐ ┐ 
@@ -109,7 +123,7 @@
 @btnPadding      : @elemBlock;
 @btnRadius       : @elemRadius;
 
-// Complex
+// - Complex
 // -------------------------------- 
 // Sets the width of the label on .form-horizontal;
 // 1- @labelwidth 
@@ -124,7 +138,7 @@
 //                                               4
 //                                              ┘
 
-// Forms
+// - Forms
 // -------------------------------- 
 @labelWidth      : @elemWidth;
 @labelSpan       : @elemSpan;
@@ -133,7 +147,7 @@
 @inputRadius     : @elemRadius;
 
 
-// Table
+// - Tables
 // -------------------------------- 
 @tableBgHead     : @brandDefault;
 @tableBorder     : 1px solid lighten(@subFontColor, 20%);
@@ -142,13 +156,13 @@
 
 
 
-// Media
+// - Media
 // -------------------------------- 
 @mediaSpan       : @elemSpan;
 
 
 
-// Definition lists
+// - Definition lists
 // -------------------------------- 
 @defWidth        : @elemWidth;
 @defSpan         : @elemSpan;
@@ -157,22 +171,18 @@
 
 
 
-// Layout
+// - Layout
 // ================================ 
-@gutter     : 10px;
-
+@gutter  : 10px;
+@grids   : "triad:3", "quad:4";
+ 
 //grids separated by comma
-//@grids: "cols:12";
-@grids: "triad:3", "quad:4";
+//Example: @grids: "cols:12";
 
 
 
-// IMPORTANT!
-// Less than portrait will be consider mobile (layout fluid)
-// @screenMobile: < 768px  =  @layoutMobile: auto;
-// -
-// To disable set width to false
-// e.g.: @screenLargeDevice : false;
+// - #Responsive
+// -------------------------------- 
 
 @screenSmallDevice   : 768px; 
 @screenMediumDevice  : 1024px;
@@ -181,6 +191,13 @@
 @layoutSmallDevice   : 700px;
 @layoutMediumDevice  : 940px;
 @layoutLargeDevice   : 1180px;
+
+// IMPORTANT!
+// Less than portrait will be consider mobile (layout fluid)
+// @screenMobile: < 768px  =  @layoutMobile: auto;
+// -
+// To disable set width to false
+// e.g.: @screenLargeDevice : false;
 
 
 
@@ -193,12 +210,17 @@
   - toolbox     //   basic tools (look here for help)
   - flush       // * flush styles useful for align items in a row 
   - media       // * media object
-  - responsive  // * responsive sheet
+  - grid        // * responsive sheet
   - buttons     // * basic button styling
+  - lists       // * ordered & unordered lists
+  - tables      // * tables basic styling
+  - labels      // * labels basic styling
+  - badges      // * badges basic styling
+  - messages    // * messages, alerts basic styling
   - forms       // * forms, inputs and stuff
   - box         // * basic boxes for containers, panels and stuff
 
-  - base        // * basic fonts, type, lists, etc.
+  - base        // * basic fonts, type, etc.
 
   * - You can disable this
 
@@ -212,6 +234,8 @@
   @import "lib/_media";
   @import "lib/_grid";
   @import "lib/_buttons";
+  @import "lib/_lists";
+  @import "lib/_tables";
   @import "lib/_labels";
   @import "lib/_badges";
   @import "lib/_messages";
@@ -225,8 +249,8 @@
   @import "theme/_demo";
   @import "theme/_prism";
 
+  // your stuff goes here
+  // @import "theme/_styles";
+
 /*!
   ====================== */
-
-  // your stuff goes here
-  // @import "lib/theme";
