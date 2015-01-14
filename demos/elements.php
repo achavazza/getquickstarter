@@ -1,5 +1,5 @@
 <?php include ('../inc/functions.php') ?>
-<?php print render('../inc/head.php', $baseUrl,
+<?php print render('../inc/demohead.php', $baseUrl,
              array('title' => 'Documentación - ')); ?>
 <?php //include('../inc/head.php'); ?>
 <body>

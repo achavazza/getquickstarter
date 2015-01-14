@@ -4,9 +4,6 @@
 // #Lists
 // #Definition lists
 // #Tables
-// #Buttons
-// #Messages
-// #Form warnings
 
 // #Basic styles - For good typographic support
 // ======================================================================================================
@@ -14,7 +11,7 @@
 body{
     // thanks to http://cssfontstack.com/
     font-family: @baseFontFamily;
-    // line-height: 1.5;
+     line-height: 1.5;
     font-size: @baseFontSize;
     color: @baseFontColor;
 }
@@ -23,12 +20,11 @@ body{
 .h2,
 .h3,
 .h4,
-.h5,
-.h6 {
+.h5{
     display: block;
     font-weight: bold;
     line-height: 1.2;
-    margin-bottom: @hSpacing;
+    margin: @hSpacing;
 }
 
 .h1 { font-size: @h1FontSize; }
@@ -36,7 +32,7 @@ body{
 .h3 { font-size: @h3FontSize; }
 .h4 { font-size: @h4FontSize; }
 .h5 { font-size: @h5FontSize; }
-.h6 { font-size: @h6FontSize; }
+//.h6 { font-size: @h6FontSize; }
 
 /*.subheader { font-size: @subFontSize; font-weight: normal;}
 
@@ -78,7 +74,7 @@ dd {}
     &-vertical,
     &-horizontal{
         margin: 0;
-        margin-bottom: @defSpacing;
+        margin-bottom: @pSpacing;
 
         dt{
             font-weight: bold;
@@ -116,93 +112,28 @@ dd {}
 
 // #Tables
 // ======================================================================================================
-.table th,
-.table td{
-    border: @tableBorder;
-    padding: @tablePadding;
-}
-
-
-// #Buttons
-// ======================================================================================================
-.btn{
-    &-error,
-    &-danger  { .gradient(lighten(@brandDanger ,5%),darken(@brandDanger ,5%)); .contrast(@brandDanger )}
-    &-warning { .gradient(lighten(@brandWarning,5%),darken(@brandWarning,5%)); .contrast(@brandWarning)}
-    &-info    { .gradient(lighten(@brandInfo   ,5%),darken(@brandInfo   ,5%)); .contrast(@brandInfo   )}
-    &-success { .gradient(lighten(@brandSuccess,5%),darken(@brandSuccess,5%)); .contrast(@brandSuccess)}
-    &-primary { .gradient(lighten(@brandPrimary,5%),darken(@brandPrimary,5%)); .contrast(@brandPrimary)}
-    &-inverse { .gradient(lighten(@brandInverse,5%),darken(@brandInverse,5%)); .contrast(@brandInverse)}
-    &-link,
-    &-link:hover,
-    &-link:active { 
-        padding: 0;
-        background: none;
-        border: 0 none;
-        box-shadow: 0 0 transparent;
-        color: @linkFontColor;
+.table{
+    width: 100%;
+    th,
+    td{
+        padding: @tablePadding;
+        border-bottom: @tableBorder;
     }
-    &-link{
-        &:hover{
-            text-decoration: underline;
-        }
-        &:focus{
-            box-shadow: 0 0 0 transparent;
-            //text-decoration: underline;
+    th{
+        background: @tableBgHead;
+    }
+    &-bordered{
+        th,
+        td{
+            border: @tableBorder;
         }
     }
-    &-hollow{
-        color: inherit;
-        border-color: currentColor;
-        //border-color: inherit;
-        background-image: none;
-        background-color: transparent;
-        text-shadow: 0 0 transparent;
-        border-radius: 2em;
-        &:hover{
-            background: rgba(0,0,0,.2);
-            box-shadow: inset 0 2px 0 rgba(0,0,0,.2);
+    &-stripped{
+        tr:nth-child(odd) td{
+            background: @tableBgOdd;
         }
     }
-    &-block{
-        display: block;
-    }
 }
 
 
-// #Messages
-// ======================================================================================================
 
-.message { 
-    border-radius: 3px; 
-    padding: 7px;
-    display: block;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    color: #333;
-    background-color: #f2f2f2;
-    margin-bottom: 5px;
-
-    &-error,
-    &-danger  { background-color:@messageDanger;  .color(@messageDanger  ,80%)}
-    &-warning { background-color:@messageWarning; .color(@messageWarning ,80%)}
-    &-info    { background-color:@messageInfo;    .color(@messageInfo    ,80%)}
-    &-success { background-color:@messageSuccess; .color(@messageSuccess ,80%)}
-    &-primary { background-color:@messagePrimary; .color(@messagePrimary ,80%)}
-    &-inverse { background-color:@messageInverse; .color(@messageInverse ,80%)}
-}
-
-
-// #Form warnings
-// ======================================================================================================
-
-.form{
-     input{
-        &.error,
-        &.danger  { border-color: @inputDangerBorder;  }
-        &.warning { border-color: @inputWarningBorder; }
-        &.success { border-color: @inputSuccessBorder; }
-        &.info    { border-color: @inputInfoBorder;    }
-        &.primary { border-color: @inputPrimaryBorder; }
-        &.inverse { border-color: @inputInverseBorder; }
-    }
-}

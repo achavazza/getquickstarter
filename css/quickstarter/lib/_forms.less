@@ -4,6 +4,7 @@
 // #Init             - small devices and up
 // #Form-horizontal  - label next to input
 // #Form-fit         - fits in the screen 100%
+// #Form-styles      - for validation and warnings
 
 
 
@@ -40,7 +41,7 @@
                       rgba(0, 0, 0, .1) 
                       rgba(0, 0, 0, .1); 
 
-        border-radius: 3px;
+        border-radius: @inputRadius;
 
         padding: @inputPadding;
         margin: 0;
@@ -48,6 +49,11 @@
         vertical-align: middle;
 
         width: 100%;
+        &:focus{
+            border-color: @brandPrimary;
+            box-shadow: 0 0 10px fade(@brandPrimary,50%);
+            outline: 0 none;
+        }
     }
 
     label { display: block; }
@@ -84,19 +90,21 @@
         > * {
             display: table-cell !important;
             margin: 0;
+            border-radius: 0 !important;
+            vertical-align: baseline !important;
         }
         :first-child{
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
+            border-top-left-radius: @inputRadius !important;
+            border-bottom-left-radius: @inputRadius !important;
         }
         :last-child{
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
+            border-top-right-radius: @inputRadius !important;
+            border-bottom-right-radius: @inputRadius !important;
         }
         .add-on{
             width: 1%;
             &.btn{
-                padding: 0 5px;
+                //padding: 0 5px;
                 vertical-align: middle;
             }
         }
@@ -223,3 +231,20 @@
 // [type="time"]
 // [type="url"]
 // [type="week"]
+
+
+// #Form-styles
+// ======================================================================================================
+
+.form{
+     input{
+        &.error,
+        &.danger  { border-color: @inputDangerBorder  !important; }
+        &.warning { border-color: @inputWarningBorder !important; }
+        &.success { border-color: @inputSuccessBorder !important; }
+        &.info    { border-color: @inputInfoBorder    !important; }
+        &.primary { border-color: @inputPrimaryBorder !important; }
+        &.alt     { border-color: @inputAltBorder     !important; }
+        &.inverse { border-color: @inputInverseBorder !important; }
+    }
+}

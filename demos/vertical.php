@@ -1,13 +1,13 @@
 <?php 
     include('../inc/functions.php')
 ?>
-<?php print render('../inc/head.php', $baseUrl, 
+<?php print render('../inc/demohead.php', $baseUrl, 
              array('title' => 'Demo - ')); ?>
 <body>
     <div class="grid">
         <div class="row">
             <div class="quad-3">
-                <h1 class="h1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</h1>
+                <h1 class="h1 no-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -35,7 +35,7 @@
                 </p>
             </div>
             <div class="quad-1">
-                <h2 class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</h2>
+                <h2 class="h3 no-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

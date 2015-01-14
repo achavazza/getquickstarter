@@ -1,0 +1,38 @@
+.bg-elem(){
+	text-align: center;
+	padding: 10px;
+	background-color: @bgquad;
+	display: block;
+	margin-bottom: @gutter;
+}
+
+.bg-grid{
+	.bg-elem();
+	background-color: @bgquad;
+}
+.bg-visible{
+	.bg-elem();
+	background-color: @bgvisible;
+}
+.bg-invisible{
+	.bg-elem();
+	background-color: @bgquad;
+}
+.section{
+	margin-bottom: 40px;
+	.title{
+		margin-bottom: 40px;
+	}
+}
+.title{
+	font-weight: lighter;
+}
+
+.nesting{
+	background-color: fade(#CDE1EB, 50%);
+	.bg-grid{
+		.bg-elem();
+		background-color: #CDE1EB;
+	}
+
+}
