@@ -131,16 +131,16 @@
     </div>
 </section>
 <section class="section grid">
-    <h2 class="h1 title">Anidado</h2>
+    <h2 class="h1 title">Nesting</h2>
     <div class="row">
         <div class="quad-4">
-            <div class="nest">
+            <div class="nesting">
                 <span class="bg-grid">
                     .quad-4
                 </span>
                 <div class="row">
                     <div class="quad-2">
-                        <div class="nest">
+                        <div class="nesting">
                             <span class="bg-grid">
                                 .quad-2
                             </span>
@@ -159,7 +159,7 @@
                         </div>
                     </div>
                     <div class="quad-2">
-                        <div class="nest">
+                        <div class="nesting">
                             <span class="bg-grid">
                                 .quad-2
                             </span>
