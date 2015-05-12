@@ -19,7 +19,7 @@
             <section id="psd-template">
                 <h2 class="h1 title">PSD template</h2>
                 <p>A blank Sheet ready to design</p>
-                <a href="http://achavazza.github.io/getquickstarter/download/QS-grid.zip" class="btn btn-primary uppercase" target="_blank">
+                <a href="https://github.com/achavazza/getquickstarter/raw/gh-pages/download/QS-Grid.zip" class="btn btn-primary uppercase" target="_blank">
                     Download PSD Template
                 </a>
             </section>
